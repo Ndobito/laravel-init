@@ -9,8 +9,14 @@
     {
       "url": "/page-2",
       "icon": "menu-icon tf-icons bx bx-file",
-      "name": "Page 2",
+      "name": "Generate Excel",
       "slug": "pages-page-2"
+    },
+    {
+      "url": "/page-3",
+      "icon": "menu-icon tf-icons bx bx-file",
+      "name": "Generate PDF",
+      "slug": "pages-page-3"
     }
   ]
 }

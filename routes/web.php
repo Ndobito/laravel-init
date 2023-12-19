@@ -21,14 +21,15 @@ $controller_path = 'App\Http\Controllers';
 
 
 Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
+  'auth:sanctum',
+  config('jetstream.auth_session'),
+  'verified'
 ])->group(function () {
-$controller_path = 'App\Http\Controllers';
+  $controller_path = 'App\Http\Controllers';
 
-    Route::get('/', $controller_path . '\pages\HomePage@index')->name('pages-home');
-    Route::get('/page-2', $controller_path . '\pages\Page2@index')->name('pages-page-2');
-
-    
+  Route::get('/', $controller_path . '\pages\HomePage@index')->name('pages-home');
+  Route::get('/page-2', $controller_path . '\pages\Page2@index')->name('pages-page-2');
+  Route::get('/page-3', $controller_path . '\pages\Page3@index')->name('pages-page-3');
+  Route::get('/page-3/pdf', $controller_path.'\pages\Page3@f_generatePdf')->name('generatePdf');
+  Route::get('/page-2/excel', $controller_path.'\pages\Page2@f_generateExcel')->name('generateExcel');
 });
